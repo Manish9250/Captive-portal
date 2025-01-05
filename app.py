@@ -5,7 +5,9 @@ app = None #Global variable
 def setup_app(): #Initializations
     app = Flask(__name__)
     app.app_context().push() #Direct access to other modules
+    app.config["SECRET_KEY"] = "123456"
     app.debug=True
+
 
 setup_app() # initializing app
 
